@@ -8,8 +8,13 @@ const config = require('./config');
 
 const app = express();
 
-mongoose.connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
-    .catch(error => console.error(error));
+mongoose
+  .connect(config.database, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+  })
+  .catch((error) => console.error(error));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,11 +22,11 @@ app.use(morgan('dev'));
 app.use(cors());
 
 app.get('/', (req, res, next) => {
-    res.json({
-        user: 'Jay'
-    })
+  res.json({
+    user: 'Jay'
+  });
 });
 
-app.listen(3030, err => {
-    console.log('Magic happens on port awesome ' + config.port);
+app.listen(3030, (err) => {
+  console.log('Magic happens on port awesome ' + config.port);
 });
