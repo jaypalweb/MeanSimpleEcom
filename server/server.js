@@ -15,17 +15,15 @@ mongoose
     useFindAndModify: false
   })
   .catch((error) => console.error(error));
+mongoose.set('useCreateIndex', true);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.get('/', (req, res, next) => {
-  res.json({
-    user: 'Jay'
-  });
-});
+const userRouters = require('./routes/account');
+app.use('/api/accounts', userRouters);
 
 app.listen(3030, (err) => {
   console.log('Magic happens on port awesome ' + config.port);
