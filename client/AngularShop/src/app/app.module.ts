@@ -10,9 +10,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { MessageComponent } from './message/message.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MessageComponent, RegistrationComponent],
+  declarations: [AppComponent, HomeComponent, MessageComponent, RegistrationComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

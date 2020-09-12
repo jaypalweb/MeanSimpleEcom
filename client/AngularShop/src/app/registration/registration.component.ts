@@ -31,7 +31,7 @@ export class RegistrationComponent implements OnInit {
       if (this.email) {
         if (this.password) {
           if (this.password1) {
-            if (this.password == this.password1) {
+            if (this.password === this.password1) {
               return true;
             } else {
               this.data.error('Passwords do not match');
