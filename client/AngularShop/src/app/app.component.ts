@@ -13,7 +13,9 @@ export class AppComponent {
   isCollapsed = true;
   //title = 'AngularShop';
 
-  constructor(private router: Router, private data: DataService) {}
+  constructor(private router: Router, public data: DataService) {
+    this.data.getProfile();
+  }
 
   get token() {
     return localStorage.getItem('token');
