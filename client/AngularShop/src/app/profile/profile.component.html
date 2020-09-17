@@ -28,27 +28,27 @@
         <a routerLink="/profile/address" class="btn btn-warning">
           Change Shipping Address
         </a>
-      </div>
-      <br />
-      <br />
-      <div *ngIf="data.user.isSeller">
-        <p class="lead">Seller Actions</p>
-        <hr />
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <a
-              routerLink="/profile/postproduct"
-              class="btn btn-otline-success btn-block"
-            >
-              Post Product for sale
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a
-              routerLink="/profile/myproducts"
-              class="btn btn-outline-info btn-block"
-              >My Products</a
-            >
+        <br />
+        <br />
+        <div *ngIf="data.user.isSeller">
+          <p class="lead">Seller Actions</p>
+          <hr />
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <a
+                routerLink="/profile/postproduct"
+                class="btn btn-outline-success btn-block"
+              >
+                Post Product for Sale
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a
+                routerLink="/profile/myproducts"
+                class="btn btn-outline-info btn-block"
+                >My Products</a
+              >
+            </div>
           </div>
         </div>
       </div>
