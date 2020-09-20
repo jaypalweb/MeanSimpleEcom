@@ -23,7 +23,12 @@ app.use(morgan('dev'));
 app.use(cors());
 
 const userRouters = require('./routes/account');
+const mainRoutes = require('./routes/main');
+const sellerRoutes = require('./routes/seller');
+
+app.use('/api', mainRoutes);
 app.use('/api/accounts', userRouters);
+app.use('/api/seller', sellerRoutes);
 
 app.listen(3030, (err) => {
   console.log('Magic happens on port awesome ' + config.port);
